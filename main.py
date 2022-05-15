@@ -53,6 +53,7 @@ def send_email(gamers_who_can_attend, day, game):
 
 game_night = find_best_night(calculate_availability(gamers))
 attending_gamers = available_on_night(gamers, game_night)
+print("First night gamers: ")
 send_email(attending_gamers, game_night, "Abruptly Goblins")
 
 rest_of_gamers = []
@@ -62,4 +63,5 @@ for that_gamer in gamers:
 
 second_night = find_best_night(calculate_availability(rest_of_gamers))
 second_night_gamers = available_on_night(rest_of_gamers, second_night)
+print("Second night gamers: ")
 send_email(second_night_gamers, second_night, "Abruptly Goblins")
